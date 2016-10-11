@@ -1,5 +1,6 @@
 # ZKit
 
+[![Build Status](https://travis-ci.org/lzackx/ZKit.svg?branch=master)](https://travis-ci.org/lzackx/ZKit)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/lzackx/ZKit/blob/master/LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-iOS%208.0+-66CCFF.svg)](http://cocoapods.org/pods/ZKit)
 [![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)](https://swift.org)
