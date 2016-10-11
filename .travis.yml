@@ -1,0 +1,37 @@
+language: objective-c
+osx_image: xcode8
+xcode_sdk: iphonesimulator10.0
+env:
+  global:
+  - FRAMEWORK_NAME=ZKit
+branches:
+ only:
+ - master
+
+#xcode_project: ZKit/ZKit.xcodeproj
+#xcode_workspace:
+#xcode_scheme: ZKit/ZKitTests
+#podfile: path/to/Podfile
+
+#before_install:
+#install:
+#before_script:
+
+script:
+- xcodebuild clean test -project ZKit/ZKit.xcodeproj -scheme ZKit -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 5,OS=10.0' ONLY_ACTIVE_ARCH=NO
+# cache: cocoapods
+# podfile: Example/Podfile
+# before_install:
+# - gem install cocoapods # Since Travis is not always on latest version
+# - pod install --project-directory=Example
+# script:
+# - pod spec lint
+# - pod lib lint
+
+
+#after_success:
+#after_failure:
+#before_deploy:
+#deploy:
+#after_deploy:
+#after_script:
