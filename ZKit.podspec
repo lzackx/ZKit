@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ZKit'
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = 'A common extension of UIView'
 
   s.homepage         = "https://github.com/lzackx/ZKit"
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   
   s.pod_target_xcconfig =  {
-        'SWIFT_VERSION' => '3.2',
+        'SWIFT_VERSION' => '4.0',
   }
 end
