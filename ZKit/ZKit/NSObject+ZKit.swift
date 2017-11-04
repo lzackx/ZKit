@@ -10,7 +10,7 @@ import Foundation
 
 extension NSObject {
     
-    func zprint(_ items: Any..., separator: String = " ", terminator: String = "") {
+    public func zprint(_ items: Any..., separator: String = " ", terminator: String = "") {
         #if DEBUG
             let date = Date()
             let timeFormatter = DateFormatter()
