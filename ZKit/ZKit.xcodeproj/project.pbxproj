@@ -12,6 +12,7 @@
 		144B07271DABC6BA007CC4FA /* ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 144B07191DABC6BA007CC4FA /* ZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		144B07321DABC70D007CC4FA /* UIScrollView+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B07301DABC70D007CC4FA /* UIScrollView+ZKit.swift */; };
 		144B07331DABC70D007CC4FA /* UIView+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B07311DABC70D007CC4FA /* UIView+ZKit.swift */; };
+		A7147DF21FAD9827008ADBFD /* NSObject+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7147DF11FAD9827008ADBFD /* NSObject+ZKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		144B07261DABC6BA007CC4FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144B07301DABC70D007CC4FA /* UIScrollView+ZKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ZKit.swift"; sourceTree = "<group>"; };
 		144B07311DABC70D007CC4FA /* UIView+ZKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ZKit.swift"; sourceTree = "<group>"; };
+		A7147DF11FAD9827008ADBFD /* NSObject+ZKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ZKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				144B071A1DABC6BA007CC4FA /* Info.plist */,
 				144B07311DABC70D007CC4FA /* UIView+ZKit.swift */,
 				144B07301DABC70D007CC4FA /* UIScrollView+ZKit.swift */,
+				A7147DF11FAD9827008ADBFD /* NSObject+ZKit.swift */,
 			);
 			path = ZKit;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				144B07331DABC70D007CC4FA /* UIView+ZKit.swift in Sources */,
 				144B07321DABC70D007CC4FA /* UIScrollView+ZKit.swift in Sources */,
+				A7147DF21FAD9827008ADBFD /* NSObject+ZKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,11 +359,12 @@
 				INFOPLIST_FILE = ZKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzackx.ZKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -377,10 +382,11 @@
 				INFOPLIST_FILE = ZKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzackx.ZKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -395,7 +401,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzackx.ZKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -409,7 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzackx.ZKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

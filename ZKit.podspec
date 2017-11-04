@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ZKit'
-  s.version          = "1.0.0"
-  s.summary          = 'A common extension of UIView'
+  s.version          = "1.1.0"
+  s.summary          = 'A common extension tool'
 
   s.homepage         = "https://github.com/lzackx/ZKit"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
