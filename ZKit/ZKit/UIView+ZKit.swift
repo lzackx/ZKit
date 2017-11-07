@@ -98,3 +98,48 @@ extension UIView {
     }
     
 }
+
+extension UIView {
+    
+    public func vibrancyView(with style: UIBlurEffectStyle, contentView: UIView? = nil) -> UIView {
+        
+        guard let contentView = contentView else {
+            return blurView(with: style)
+        }
+        // Init blur effect with style
+        let blurEffect = UIBlurEffect(style: style)
+        // Init blur effect view
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        // Init vibrancy effect view
+        let vibrancyEffectView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
+        vibrancyEffectView.frame = blurEffectView.bounds
+        // combine each view
+        vibrancyEffectView.contentView.addSubview(contentView)
+        blurEffectView.contentView.addSubview(vibrancyEffectView)
+        // return duplicated self with combined view from above
+        addSubview(blurEffectView)
+        return self
+    }
+    
+    public func blurView(with style: UIBlurEffectStyle) -> UIView {
+        
+        let blurEffect = UIBlurEffect(style: style)
+        let effectView = UIVisualEffectView(effect: blurEffect)
+        effectView.frame = bounds
+        addSubview(effectView)
+        return self
+    }
+}
+
+extension UIView {
+    
+    public func duplicate(view: UIView) -> UIView {
+        
+        let archiveData = NSKeyedArchiver.archivedData(withRootObject: view)
+        let duplicateView = NSKeyedUnarchiver.unarchiveObject(with: archiveData) as! UIView
+        return duplicateView
+    }
+    
+}
+

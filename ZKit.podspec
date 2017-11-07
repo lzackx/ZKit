@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ZKit'
-  s.version          = "1.1.1"
+  s.version          = "1.2.0"
   s.summary          = 'A common extension tool'
 
   s.homepage         = "https://github.com/lzackx/ZKit"
