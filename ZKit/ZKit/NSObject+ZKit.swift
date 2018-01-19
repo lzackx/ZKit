@@ -16,7 +16,7 @@ extension NSObject {
             let timeFormatter = DateFormatter()
             timeFormatter.dateFormat = "yyy-MM-dd HH:mm:ss.SSS"
             let now = timeFormatter.string(from: date) as String
-            print("\(now):", "\(NSStringFromClass(self.classForCoder))", terminator: "")
+            print("[\(now)", "\(NSStringFromClass(self.classForCoder))]:", terminator: "")
             for item in items {
                 print(separator, terminator: "")
                 print(item, terminator: "")
