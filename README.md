@@ -6,7 +6,7 @@
 [![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)](https://swift.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ZKit.svg)](http://cocoapods.org/pods/ZKit)
 
-A common extension of UIView, written in Swift 3.0.
+A common extension of UIView, written in Swift 4.x.
 
 ## Requirements
 
