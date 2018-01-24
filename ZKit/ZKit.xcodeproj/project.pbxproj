@@ -13,7 +13,7 @@
 		144B07321DABC70D007CC4FA /* UIScrollView+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B07301DABC70D007CC4FA /* UIScrollView+ZKit.swift */; };
 		144B07331DABC70D007CC4FA /* UIView+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B07311DABC70D007CC4FA /* UIView+ZKit.swift */; };
 		A7147DF21FAD9827008ADBFD /* NSObject+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7147DF11FAD9827008ADBFD /* NSObject+ZKit.swift */; };
-		A7481E042017667F00678F34 /* Date+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7481E032017667F00678F34 /* Date+ZKit.swift */; };
+		A74B17982018895E00A20A7F /* String+ZKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74B17972018895E00A20A7F /* String+ZKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 		144B07301DABC70D007CC4FA /* UIScrollView+ZKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ZKit.swift"; sourceTree = "<group>"; };
 		144B07311DABC70D007CC4FA /* UIView+ZKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ZKit.swift"; sourceTree = "<group>"; };
 		A7147DF11FAD9827008ADBFD /* NSObject+ZKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ZKit.swift"; sourceTree = "<group>"; };
-		A7481E032017667F00678F34 /* Date+ZKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ZKit.swift"; sourceTree = "<group>"; };
+		A74B17972018895E00A20A7F /* String+ZKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ZKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 				144B07311DABC70D007CC4FA /* UIView+ZKit.swift */,
 				144B07301DABC70D007CC4FA /* UIScrollView+ZKit.swift */,
 				A7147DF11FAD9827008ADBFD /* NSObject+ZKit.swift */,
-				A7481E032017667F00678F34 /* Date+ZKit.swift */,
+				A74B17972018895E00A20A7F /* String+ZKit.swift */,
 			);
 			path = ZKit;
 			sourceTree = "<group>";
@@ -209,8 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74B17982018895E00A20A7F /* String+ZKit.swift in Sources */,
 				144B07331DABC70D007CC4FA /* UIView+ZKit.swift in Sources */,
-				A7481E042017667F00678F34 /* Date+ZKit.swift in Sources */,
 				144B07321DABC70D007CC4FA /* UIScrollView+ZKit.swift in Sources */,
 				A7147DF21FAD9827008ADBFD /* NSObject+ZKit.swift in Sources */,
 			);
