@@ -147,11 +147,11 @@ extension UIView {
     
     static var zBlurable = "zBlurable"
     
-    var zIsBlurred: Bool {
+    public var zIsBlurred: Bool {
         return objc_getAssociatedObject(self, &UIView.zBlurable) is UIImageView
     }
     
-    func zBlur(blurRadius: CGFloat) {
+    public func zBlur(blurRadius: CGFloat) {
         
         if self.superview == nil {
             return
@@ -173,7 +173,9 @@ extension UIView {
         let blurOverlay = UIImageView()
         blurOverlay.frame = boundingRect
         blurOverlay.image = filteredImage
-        blurOverlay.contentMode = UIViewContentMode.left
+        blurOverlay.contentMode = UIViewContentMode.center
+        blurOverlay.layer.cornerRadius = self.layer.cornerRadius
+        blurOverlay.clipsToBounds = self.clipsToBounds
         if #available(iOS 9.0, *) {
             if let superview = superview as? UIStackView,
                 let index = (superview as UIStackView).arrangedSubviews.index(of: self) {
@@ -202,7 +204,7 @@ extension UIView {
                                  objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
     }
     
-    func zUnBlur() {
+    public func zUnBlur() {
         
         guard let blurOverlay = objc_getAssociatedObject(self, &UIView.zBlurable) as? UIImageView else {
             return
