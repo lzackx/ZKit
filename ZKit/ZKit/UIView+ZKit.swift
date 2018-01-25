@@ -143,3 +143,104 @@ extension UIView {
     
 }
 
+extension UIView {
+    
+    static var zBlurable = "zBlurable"
+    
+    var zIsBlurred: Bool {
+        return objc_getAssociatedObject(self, &UIView.zBlurable) is UIImageView
+    }
+    
+    func zBlur(blurRadius: CGFloat) {
+        
+        if self.superview == nil {
+            return
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: frame.width, height: frame.height), false, 1)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext();
+        guard let blur = CIFilter(name: "CIGaussianBlur") else {
+            return
+        }
+        blur.setValue(CIImage(image: image), forKey: kCIInputImageKey)
+        blur.setValue(blurRadius, forKey: kCIInputRadiusKey)
+        let ciContext  = CIContext(options: nil)
+        let result = blur.value(forKey: kCIOutputImageKey) as! CIImage
+        let boundingRect = CGRect(x:0, y: 0, width: frame.width, height: frame.height)
+        let cgImage = ciContext.createCGImage(result, from: boundingRect)!
+        let filteredImage = UIImage(cgImage: cgImage)
+        let blurOverlay = UIImageView()
+        blurOverlay.frame = boundingRect
+        blurOverlay.image = filteredImage
+        blurOverlay.contentMode = UIViewContentMode.left
+        if #available(iOS 9.0, *) {
+            if let superview = superview as? UIStackView,
+                let index = (superview as UIStackView).arrangedSubviews.index(of: self) {
+                removeFromSuperview()
+                superview.insertArrangedSubview(blurOverlay, at: index)
+            } else {
+                blurOverlay.frame.origin = frame.origin
+                UIView.transition(from: self,
+                                  to: blurOverlay,
+                                  duration: 0.2,
+                                  options: UIViewAnimationOptions.curveEaseIn,
+                                  completion: nil)
+            }
+        } else {
+            // Fallback on earlier versions
+            blurOverlay.frame.origin = frame.origin
+            UIView.transition(from: self,
+                              to: blurOverlay,
+                              duration: 0.2,
+                              options: UIViewAnimationOptions.curveEaseIn,
+                              completion: nil)
+        }
+        objc_setAssociatedObject(self,
+                                 &UIView.zBlurable,
+                                 blurOverlay,
+                                 objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+    }
+    
+    func zUnBlur() {
+        
+        guard let blurOverlay = objc_getAssociatedObject(self, &UIView.zBlurable) as? UIImageView else {
+            return
+        }
+        if #available(iOS 9.0, *) {
+            if let superview = blurOverlay.superview as? UIStackView,
+                let index = (blurOverlay.superview as! UIStackView).arrangedSubviews.index(of: blurOverlay) {
+                blurOverlay.removeFromSuperview()
+                superview.insertArrangedSubview(self, at: index)
+            } else {
+                self.frame.origin = blurOverlay.frame.origin
+                UIView.transition(from: blurOverlay,
+                                  to: self,
+                                  duration: 0.2,
+                                  options: UIViewAnimationOptions.curveEaseIn,
+                                  completion: nil)
+            }
+        } else {
+            // Fallback on earlier versions
+            self.frame.origin = blurOverlay.frame.origin
+            UIView.transition(from: blurOverlay,
+                              to: self,
+                              duration: 0.2,
+                              options: UIViewAnimationOptions.curveEaseIn,
+                              completion: nil)
+        }
+        objc_setAssociatedObject(self,
+                                 &UIView.zBlurable,
+                                 nil,
+                                 objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+    }
+}
+
+
+
+
+
+
+
+
+
