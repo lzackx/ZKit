@@ -1,37 +1,37 @@
 language: objective-c
 osx_image: xcode9
-xcode_sdk: iphonesimulator11.0
+podfile: ZKitDemo/Podfile
+branches:
+  only:
+  - master
 env:
   global:
-  - FRAMEWORK_NAME=ZKit
-branches:
- only:
- - master
-
-#xcode_project: ZKit/ZKit.xcodeproj
-#xcode_workspace:
-#xcode_scheme: ZKit/ZKitTests
-#podfile: path/to/Podfile
-
-#before_install:
-#install:
-#before_script:
-
+    - WORKSPACE=ZKitDemo.xcworkspace
+    - SDK_SCHEME=ZKit
+    - DEMO_SCHEME=ZKitDemo
+    - IOS_SDK=iphonesimulator11.0
+  matrix:
+    - DESTINATION="platform=iOS Simulator,OS=8.1,name=iPhone 5s"  SCHEME="$SCHEME"  SDK="$IOS_SDK"  BUILD_SDK="YES"   BUILD_DEMO="YES"    POD_LINT="YES"
+    - DESTINATION="platform=iOS Simulator,OS=11.0,name=iPhone X"  SCHEME="$SCHEME"  SDK="$IOS_SDK"  BUILD_SDK="YES"   BUILD_DEMO="YES"    POD_LINT="NO"
+before_install:
+  - gem install cocoapods
+  - pod repo update
+before_script: cd ZKitDemo
 script:
-- xcodebuild clean test -project ZKit/ZKit.xcodeproj -scheme ZKit -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 5s,OS=11.0' ONLY_ACTIVE_ARCH=NO
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-# script:
-# - pod spec lint
-# - pod lib lint
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
 
+  - if [ $BUILD_SDK == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SDK_SCHEME"  -sdk "$IOS_SDK" -destination "$DESTINATION" -configuration Debug    ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SDK_SCHEME"  -sdk "$IOS_SDK" -destination "$DESTINATION" -configuration Release  ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
+    fi
 
-#after_success:
-#after_failure:
-#before_deploy:
-#deploy:
-#after_deploy:
-#after_script:
+  - if [ $BUILD_DEMO == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$DEMO_SCHEME" -sdk "$IOS_SDK" -destination "$DESTINATION" -configuration Debug  ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
+    fi
+
+  # Run `pod lib lint` if specified
+  - if [ $POD_LINT == "YES" ]; then
+      cd .. && pod lib lint --allow-warnings && cd ZKitDemo;
+    fi
