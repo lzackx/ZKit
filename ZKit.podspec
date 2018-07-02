@@ -8,6 +8,20 @@ Pod::Spec.new do |spec|
   spec.author                     = { 'lzackx' => 'zackx@foxmail.com' }
   spec.source                     = { :git => 'https://github.com/lzackx/ZKit.git', :tag => s.version }
   spec.ios.deployment_target      = '9.0'
-  spec.source_files               = 'ZKit/ZKit/core/*.{m,h}', 'ZKit/ZKit/view/*.{m,h}'
-  spec.frameworks                 = 'Foundation', 'UIKit'
+  spec.default_subspec            = 'core'
+
+  spec.subspec 'core' do |core|
+    core.source_files           = 'ZKit/ZKit/core/*.{m,h}'
+    core.frameworks             = 'Foundation'
+  end
+
+  spec.subspec 'view' do |view|
+    view.source_files           = 'ZKit/ZKit/view/*.{m,h}'
+    view.frameworks             = 'UIKit'
+  end
+
+  spec.subspec 'sysctl' do |sysctl|
+    sysctl.source_files           = 'ZKit/ZKit/sysctl/*.{m,h}'
+    sysctl.frameworks             = 'Foundation'
+  end
 end
