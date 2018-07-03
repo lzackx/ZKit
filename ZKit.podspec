@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage                   = "https://github.com/lzackx/ZKit"
   spec.license                    = { :type => 'MIT', :file => 'LICENSE' }
   spec.author                     = { 'lzackx' => 'zackx@foxmail.com' }
-  spec.source                     = { :git => 'https://github.com/lzackx/ZKit.git', :tag => s.version }
+  spec.source                     = { :git => 'https://github.com/lzackx/ZKit.git', :tag => spec.version }
   spec.ios.deployment_target      = '9.0'
   spec.default_subspec            = 'core'
 
