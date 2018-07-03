@@ -18,10 +18,12 @@ Pod::Spec.new do |spec|
   spec.subspec 'view' do |view|
     view.source_files           = 'ZKit/ZKit/view/*.{m,h}'
     view.frameworks             = 'UIKit'
+    view.dependency 'ZKit'
   end
 
   spec.subspec 'sysctl' do |sysctl|
     sysctl.source_files           = 'ZKit/ZKit/sysctl/*.{m,h}'
     sysctl.frameworks             = 'Foundation'
+    sysctl.dependency 'ZKit'
   end
 end
