@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A708F59420EC9F4E00302056 /* ZKitPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A708F59320EC790800302056 /* ZKitPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A739121A208739FC00E2011A /* UIView+ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A7391218208739FC00E2011A /* UIView+ZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A739121B208739FC00E2011A /* UIView+ZKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7391219208739FC00E2011A /* UIView+ZKit.m */; };
 		A739121E20873A1200E2011A /* UIScrollView+ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A739121C20873A1200E2011A /* UIScrollView+ZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A708F59320EC790800302056 /* ZKitPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKitPrivate.h; sourceTree = "<group>"; };
 		A73912092087373F00E2011A /* ZKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A739120D2087373F00E2011A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7391218208739FC00E2011A /* UIView+ZKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZKit.h"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				A7AD763B20EA37AC005C1DD9 /* ZKit.h */,
+				A708F59320EC790800302056 /* ZKitPrivate.h */,
 				A7AD763D20EA3875005C1DD9 /* ZKit.m */,
 			);
 			path = core;
@@ -108,6 +111,7 @@
 				A7AD763F20EA3949005C1DD9 /* ZKit+sysctl.h in Headers */,
 				A739121A208739FC00E2011A /* UIView+ZKit.h in Headers */,
 				A739121E20873A1200E2011A /* UIScrollView+ZKit.h in Headers */,
+				A708F59420EC9F4E00302056 /* ZKitPrivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

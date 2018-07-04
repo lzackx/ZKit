@@ -12,6 +12,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'core' do |core|
     core.source_files           = 'ZKit/ZKit/core/*.{m,h}'
+    core.private_header_files   = 'ZKit/ZKit/core/*Private.h'
     core.frameworks             = 'Foundation'
   end
 
