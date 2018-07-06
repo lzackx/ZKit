@@ -23,13 +23,13 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'sysctl' do |sysctl|
-    sysctl.source_files           = 'ZKit/ZKit/sysctl/*.{m,h}'
-    sysctl.frameworks             = 'Foundation'
+    sysctl.source_files         = 'ZKit/ZKit/sysctl/*.{m,h}'
+    sysctl.frameworks           = 'Foundation'
     sysctl.dependency 'ZKit/core'
   end
 
-  spec.subspec 'sysctl' do |color|
-    sysctl.source_files           = 'ZKit/ZKit/color/*.{m,h}'
-    sysctl.frameworks             = 'UIKit'
+  spec.subspec 'color' do |color|
+    color.source_files          = 'ZKit/ZKit/color/*.{m,h}'
+    color.frameworks            = 'UIKit'
   end
 end
