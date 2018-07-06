@@ -6,7 +6,7 @@ branches:
   - master
 env:
   global:
-    - WORKSPACE=ZKitDemo.xcworkspace
+    - WORKSPACE=ZKit.xcworkspace
     - SDK_SCHEME=ZKit
     - DEMO_SCHEME=ZKitDemo
     - IOS_SDK=iphonesimulator11.0
