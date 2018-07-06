@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name                       = 'ZKit'
   spec.module_name                = 'ZKit'
-  spec.version                    = "2.1.0"
+  spec.version                    = "2.2.0"
   spec.summary                    = 'A tool kit for iOS development'
   spec.homepage                   = "https://github.com/lzackx/ZKit"
   spec.license                    = { :type => 'MIT', :file => 'LICENSE' }
@@ -26,5 +26,10 @@ Pod::Spec.new do |spec|
     sysctl.source_files           = 'ZKit/ZKit/sysctl/*.{m,h}'
     sysctl.frameworks             = 'Foundation'
     sysctl.dependency 'ZKit/core'
+  end
+
+  spec.subspec 'sysctl' do |color|
+    sysctl.source_files           = 'ZKit/ZKit/color/*.{m,h}'
+    sysctl.frameworks             = 'UIKit'
   end
 end
