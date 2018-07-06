@@ -9,7 +9,7 @@ A tool kit for iOS development.
 
 ## Requirements
 
-iOS 8.0 or later.
+iOS 9.0 or later.
 
 ## Installation
 
@@ -20,17 +20,6 @@ ZKit is available through [CocoaPods](http://cocoapods.org). To install it, simp
 ```
 pod "ZKit"
 ```
-## ZKitDemo
-
-ZKitDemo is the demo of ZKit, to run it, one should do something as follows:
-
-```
-git clone https://github.com/lzackx/ZKit.git
-cd ZKit/ZKitDemo
-pod install
-open ZKitDemo.xcworkspace
-```
-Then, Ta-da :)
 
 ## Author
 
