@@ -13,11 +13,13 @@
 		A739121E20873A1200E2011A /* UIScrollView+ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A739121C20873A1200E2011A /* UIScrollView+ZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A739121F20873A1200E2011A /* UIScrollView+ZKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A739121D20873A1200E2011A /* UIScrollView+ZKit.m */; };
 		A73912232087518B00E2011A /* ZKit+sysctl.m in Sources */ = {isa = PBXBuildFile; fileRef = A73912222087518B00E2011A /* ZKit+sysctl.m */; };
-		A78CB9AF20EF11ED00A01EEC /* UIColor+ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A78CB9AD20EF11ED00A01EEC /* UIColor+ZKit.h */; };
+		A78CB9AF20EF11ED00A01EEC /* UIColor+ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A78CB9AD20EF11ED00A01EEC /* UIColor+ZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A78CB9B020EF11ED00A01EEC /* UIColor+ZKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CB9AE20EF11ED00A01EEC /* UIColor+ZKit.m */; };
 		A7AD763C20EA37AC005C1DD9 /* ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AD763B20EA37AC005C1DD9 /* ZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7AD763E20EA3875005C1DD9 /* ZKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AD763D20EA3875005C1DD9 /* ZKit.m */; };
 		A7AD763F20EA3949005C1DD9 /* ZKit+sysctl.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AD763920EA2F4C005C1DD9 /* ZKit+sysctl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D6B37320F8A90E00C5D9E7 /* NSString+ZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D6B37120F8A90E00C5D9E7 /* NSString+ZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D6B37420F8A90E00C5D9E7 /* NSString+ZKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D6B37220F8A90E00C5D9E7 /* NSString+ZKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		A7AD763920EA2F4C005C1DD9 /* ZKit+sysctl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZKit+sysctl.h"; sourceTree = "<group>"; };
 		A7AD763B20EA37AC005C1DD9 /* ZKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKit.h; sourceTree = "<group>"; };
 		A7AD763D20EA3875005C1DD9 /* ZKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKit.m; sourceTree = "<group>"; };
+		A7D6B37120F8A90E00C5D9E7 /* NSString+ZKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZKit.h"; sourceTree = "<group>"; };
+		A7D6B37220F8A90E00C5D9E7 /* NSString+ZKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				A739120D2087373F00E2011A /* Info.plist */,
+				A7D6B37920F8ACA300C5D9E7 /* string */,
 				A7AD763A20EA37AC005C1DD9 /* core */,
 				A739122020873A3200E2011A /* sysctl */,
 				A739122120873A3A00E2011A /* view */,
@@ -114,6 +119,15 @@
 			path = core;
 			sourceTree = "<group>";
 		};
+		A7D6B37920F8ACA300C5D9E7 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				A7D6B37120F8A90E00C5D9E7 /* NSString+ZKit.h */,
+				A7D6B37220F8A90E00C5D9E7 /* NSString+ZKit.m */,
+			);
+			path = string;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -123,6 +137,7 @@
 			files = (
 				A7AD763C20EA37AC005C1DD9 /* ZKit.h in Headers */,
 				A7AD763F20EA3949005C1DD9 /* ZKit+sysctl.h in Headers */,
+				A7D6B37320F8A90E00C5D9E7 /* NSString+ZKit.h in Headers */,
 				A78CB9AF20EF11ED00A01EEC /* UIColor+ZKit.h in Headers */,
 				A739121A208739FC00E2011A /* UIView+ZKit.h in Headers */,
 				A739121E20873A1200E2011A /* UIScrollView+ZKit.h in Headers */,
@@ -198,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7AD763E20EA3875005C1DD9 /* ZKit.m in Sources */,
+				A7D6B37420F8A90E00C5D9E7 /* NSString+ZKit.m in Sources */,
 				A73912232087518B00E2011A /* ZKit+sysctl.m in Sources */,
 				A739121B208739FC00E2011A /* UIView+ZKit.m in Sources */,
 				A739121F20873A1200E2011A /* UIScrollView+ZKit.m in Sources */,
