@@ -10,12 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define Z_RED       @"#FF66CC"
-#define Z_YELLOW    @"#FFCC66"
-#define Z_GREEN     @"#66FFCC"
-#define Z_CYAN      @"#CCFF66"
-#define Z_PURPLE    @"#CC66FF"
-#define Z_BLUE      @"#66CCFF"
+#define Z_RED                           @"#FF66CC"
+#define Z_YELLOW                        @"#FFCC66"
+#define Z_GREEN                         @"#66FFCC"
+#define Z_CYAN                          @"#CCFF66"
+#define Z_PURPLE                        @"#CC66FF"
+#define Z_BLUE                          @"#66CCFF"
+#define Z_SYSTEM_DEFAULT_BACKGROUND     @"#EFEFF4"
 
 @interface UIColor (ZKit)
 
