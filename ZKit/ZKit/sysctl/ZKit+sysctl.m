@@ -12,6 +12,39 @@
 
 @implementation ZKit (sysctl)
 
++ (int)sysctlByName:(char *)name {
+    
+    size_t size = -1;
+    int val = 0;
+    
+    if (!name) {
+        ZLog(@"name == NULL");
+        return -1;
+    }
+    
+    if (strlen(name) == 0) {
+        ZLog(@"strlen(name) == 0");
+        return -1;
+    }
+    
+    if (sysctlbyname(name, NULL, &size, NULL, 0) == -1) {
+        ZLog(@"sysctlbyname size with name '%s' has failed: %s", name, strerror(errno));
+        return -1;
+    }
+    
+    if (size == -1) {
+        ZLog(@"sysctlbyname with name '%s' returned invalid size", name);
+        return -1;
+    }
+    
+    if (sysctlbyname(name, &val, &size, NULL, 0) == -1) {
+        ZLog(@"sysctlbyname value with name '%s' has failed: %s", name, strerror(errno));
+        return -1;
+    }
+    
+    return val;
+}
+
 + (uint64_t)sysctl64ByName:(char *)name {
     
     size_t size = -1;

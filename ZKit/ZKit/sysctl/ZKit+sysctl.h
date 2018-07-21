@@ -11,6 +11,7 @@
 
 @interface ZKit (sysctl)
 
++ (int)sysctlByName:(char *)name;
 + (uint64_t)sysctl64ByName:(char *)name;
 + (NSString *)sysctlChrByName:(char *)name;
 + (void *)sysctlPtrByName:(char *)name pointer:(void *)ptr size:(size_t)size;
