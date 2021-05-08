@@ -74,8 +74,7 @@
 				A7D6B37920F8ACA300C5D9E7 /* string */,
 				A7AD763A20EA37AC005C1DD9 /* core */,
 				A739122020873A3200E2011A /* sysctl */,
-				A739122120873A3A00E2011A /* view */,
-				A78CB9B120EF11F500A01EEC /* color */,
+				A739122120873A3A00E2011A /* ui */,
 			);
 			path = ZKit;
 			sourceTree = "<group>";
@@ -89,24 +88,17 @@
 			path = sysctl;
 			sourceTree = "<group>";
 		};
-		A739122120873A3A00E2011A /* view */ = {
+		A739122120873A3A00E2011A /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				A78CB9AD20EF11ED00A01EEC /* UIColor+ZKit.h */,
+				A78CB9AE20EF11ED00A01EEC /* UIColor+ZKit.m */,
 				A7391218208739FC00E2011A /* UIView+ZKit.h */,
 				A7391219208739FC00E2011A /* UIView+ZKit.m */,
 				A739121C20873A1200E2011A /* UIScrollView+ZKit.h */,
 				A739121D20873A1200E2011A /* UIScrollView+ZKit.m */,
 			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		A78CB9B120EF11F500A01EEC /* color */ = {
-			isa = PBXGroup;
-			children = (
-				A78CB9AD20EF11ED00A01EEC /* UIColor+ZKit.h */,
-				A78CB9AE20EF11ED00A01EEC /* UIColor+ZKit.m */,
-			);
-			path = color;
+			path = ui;
 			sourceTree = "<group>";
 		};
 		A7AD763A20EA37AC005C1DD9 /* core */ = {
