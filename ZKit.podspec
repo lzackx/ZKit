@@ -45,8 +45,9 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'router' do |subspec|
-    subspec.source_files          = 'ZKit/ZKit/router/*.{m,h}'
-    subspec.dependency 'ZKit/core'
+		subspec.source_files          = 'ZKit/ZKit/router/*.{m,h}'
+		subspec.dependency 'ZKit/core'
+		subspec.dependency 'Zouter', '~> 2.0.0'
   end
   
   spec.subspec 'tabbar' do |subspec|
