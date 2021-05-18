@@ -1,29 +1,28 @@
 # ZKit
 
-[![Build Status](https://travis-ci.org/lzackx/ZKit.svg?branch=master)](https://travis-ci.org/lzackx/ZKit)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/lzackx/ZKit/blob/master/LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-iOS%208.0+-66CCFF.svg)](http://cocoapods.org/pods/ZKit)
-[![CocoaPods](https://img.shields.io/cocoapods/v/ZKit.svg)](http://cocoapods.org/pods/ZKit)
+[![Build Status](https://travis-ci.com/lzackx/ZKit.svg?branch=master)](https://travis-ci.com/lzackx/ZKit)
+[![Version](https://img.shields.io/cocoapods/v/ZKit.svg?style=flat)](https://cocoapods.org/pods/ZKit)
+[![License](https://img.shields.io/cocoapods/l/ZKit.svg?style=flat)](https://cocoapods.org/pods/ZKit)
+[![Platform](https://img.shields.io/cocoapods/p/ZKit.svg?style=flat)](https://cocoapods.org/pods/ZKit)
 
-A tool kit for iOS development.
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
-iOS 9.0 or later.
-
 ## Installation
 
-### Cocoapods
+ZKit is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-ZKit is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
-
-```
-pod "ZKit"
+```ruby
+pod 'ZKit'
 ```
 
 ## Author
 
-lzackx
+lzackx, lzackx@lzackx.com
 
 ## License
 
