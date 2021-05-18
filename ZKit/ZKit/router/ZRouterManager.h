@@ -21,9 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 			targetActionURL:(NSString *)targetActionURL
 			   synchronizly:(BOOL)synchronizly
 				   priority:(ZouterCommandPriority)priority
+				 parameters:(NSDictionary<NSString *, NSObject *> * __nullable)parameters
 				 willExcute:(ZouterCommandCallback __nullable)willExcute
-				  didExcute:(ZouterCommandCallback __nullable)didExcute
-				 parameters:(NSDictionary<NSString *, NSObject *> * __nullable)parameters;
+				  didExcute:(ZouterCommandCallback __nullable)didExcute;
 
 + (void)registerCommand:(ZouterCommand *)command;
 

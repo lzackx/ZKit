@@ -25,9 +25,9 @@
 			targetActionURL:(NSString *)targetActionURL
 			   synchronizly:(BOOL)synchronizly
 				   priority:(ZouterCommandPriority)priority
+				 parameters:(NSDictionary<NSString *, NSObject *> * __nullable)parameters
 				 willExcute:(ZouterCommandCallback)willExcute
-				  didExcute:(ZouterCommandCallback)didExcute
-				 parameters:(NSDictionary<NSString *, NSObject *> *)parameters {
+				  didExcute:(ZouterCommandCallback)didExcute {
 	
 	ZouterCommand *command = [ZouterCommand new];
 	command.pattern = pattern;
