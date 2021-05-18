@@ -1,0 +1,78 @@
+PODS:
+  - ZKit/advertisement (3.0.0):
+    - ZKit/core
+  - ZKit/all (3.0.0):
+    - ZKit/advertisement
+    - ZKit/att
+    - ZKit/core
+    - ZKit/flutter
+    - ZKit/info
+    - ZKit/location
+    - ZKit/media
+    - ZKit/navigationbar
+    - ZKit/notification
+    - ZKit/optimize
+    - ZKit/payment
+    - ZKit/popup
+    - ZKit/request
+    - ZKit/router
+    - ZKit/string
+    - ZKit/sysctl
+    - ZKit/tabbar
+    - ZKit/ui
+    - ZKit/webview
+  - ZKit/att (3.0.0):
+    - ZKit/core
+  - ZKit/core (3.0.0)
+  - ZKit/flutter (3.0.0):
+    - ZKit/core
+  - ZKit/info (3.0.0):
+    - ZKit/core
+  - ZKit/location (3.0.0):
+    - ZKit/core
+  - ZKit/media (3.0.0):
+    - ZKit/core
+  - ZKit/navigationbar (3.0.0):
+    - ZKit/core
+  - ZKit/notification (3.0.0):
+    - ZKit/core
+  - ZKit/optimize (3.0.0):
+    - ZKit/core
+  - ZKit/payment (3.0.0):
+    - ZKit/core
+  - ZKit/popup (3.0.0):
+    - ZKit/core
+  - ZKit/request (3.0.0):
+    - ZKit/core
+  - ZKit/router (3.0.0):
+    - ZKit/core
+    - Zouter (~> 2.0.0)
+  - ZKit/string (3.0.0)
+  - ZKit/sysctl (3.0.0):
+    - ZKit/core
+  - ZKit/tabbar (3.0.0):
+    - ZKit/core
+  - ZKit/ui (3.0.0):
+    - ZKit/core
+  - ZKit/webview (3.0.0):
+    - ZKit/core
+  - Zouter (2.0.0)
+
+DEPENDENCIES:
+  - ZKit/all (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Zouter
+
+EXTERNAL SOURCES:
+  ZKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZKit: ea693e0b88192b7c07da909c6b5403991cea11bf
+  Zouter: 74f5a65ef8057d07b45cb90b67af87f709b7f564
+
+PODFILE CHECKSUM: ba8724fa2ecadbeb5f3973cd83b3257b12499caa
+
+COCOAPODS: 1.10.0
