@@ -72,6 +72,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'request' do |subspec|
     subspec.source_files          = 'ZKit/Classes/request/*.{m,h}'
     subspec.dependency 'ZKit/core'
+		subspec.dependency 'Zequest'
   end
 
   spec.subspec 'router' do |subspec|
