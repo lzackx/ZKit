@@ -1,13 +1,12 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'ZKit_Example' do
   pod 'ZKit/all', :path => '../'
 
   target 'ZKit_Tests' do
     inherit! :search_paths
-
     
   end
 end

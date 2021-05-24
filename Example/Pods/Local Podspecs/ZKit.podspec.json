@@ -16,7 +16,7 @@
     "tag": "3.0.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "default_subspecs": "core",
   "subspecs": [
@@ -130,6 +130,9 @@
       "source_files": "ZKit/Classes/request/*.{m,h}",
       "dependencies": {
         "ZKit/core": [
+
+        ],
+        "Zequest": [
 
         ]
       }
