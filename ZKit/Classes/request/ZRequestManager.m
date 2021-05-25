@@ -32,11 +32,6 @@
 	[[Zequest shared] launchReachabilityManagerWithDomain:domain statusChangeCallback:statusChangeCallback];
 }
 
-+ (NSString *)fetchCachedResponseFor:(NSString *)url {
-	NSString *cr = [[Zequest shared] cachedResponseFor:url];
-	return cr;
-}
-
 + (void)get:(NSString *)url
 	 header:(NSDictionary *)header
  parameters:(NSDictionary *)parameters
@@ -69,6 +64,16 @@ shouldCache:(BOOL)shouldCache
 				  progress:nil
 				   success:success
 				   failure:failure];
+}
+
++ (void)cachedResponseForURL:(NSString *)url
+				   dataClass:(nullable Class)dataClass
+					 success:(nullable void (^)(NSString * _Nullable jsonObject))success
+					 failure:(nullable void (^)(NSError * _Nonnull error))failure {
+	[[Zequest shared] cachedResponseForURL:url
+								 dataClass:dataClass
+								   success:success
+								   failure:failure];
 }
 
 @end

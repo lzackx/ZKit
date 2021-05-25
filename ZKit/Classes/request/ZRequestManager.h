@@ -22,8 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)launchNetworkReachabilityMonitorWithDomain:(nullable NSString *)domain
 							  statusChangeCallback:(nullable void (^)(NSInteger status))statusChangeCallback;
 
-+ (NSString *)fetchCachedResponseFor:(NSString *)url;
-
 + (void)get:(NSString *)url
 	 header:(NSDictionary *)header
  parameters:(NSDictionary *)parameters
@@ -39,6 +37,11 @@ shouldCache:(BOOL)shouldCache
    dataClass:(nullable Class)dataClass
 	 success:(nullable void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
 	 failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
+
++ (void)cachedResponseForURL:(NSString *)url
+				   dataClass:(nullable Class)dataClass
+					 success:(nullable void (^)(NSString * _Nullable jsonObject))success
+					 failure:(nullable void (^)(NSError * _Nonnull error))failure;
 
 @end
 
