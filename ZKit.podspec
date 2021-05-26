@@ -139,6 +139,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'att' do |subspec|
     subspec.source_files          = 'ZKit/Classes/att/*.{m,h}'
     subspec.dependency 'ZKit/core'
+    subspec.frameworks            = 'AppTrackingTransparency'
   end
 
 end
