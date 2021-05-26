@@ -133,7 +133,7 @@
 
         ],
         "Zequest": [
-
+          "~> 1.0.0"
         ]
       }
     },
@@ -255,7 +255,8 @@
         "ZKit/core": [
 
         ]
-      }
+      },
+      "frameworks": "AppTrackingTransparency"
     }
   ]
 }
