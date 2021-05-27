@@ -17,6 +17,7 @@ Pod::Spec.new do |spec|
   spec.source                     = { :git => 'https://github.com/lzackx/ZKit.git', :tag => spec.version }
   spec.ios.deployment_target      = '10.0'
   spec.default_subspec            = 'core'
+	spec.static_framework = true
 
   spec.subspec 'core' do |subspec|
     subspec.source_files          = 'ZKit/Classes/core/*.{m,h}'

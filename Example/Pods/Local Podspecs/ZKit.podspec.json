@@ -19,6 +19,7 @@
     "ios": "10.0"
   },
   "default_subspecs": "core",
+  "static_framework": true,
   "subspecs": [
     {
       "name": "core",
