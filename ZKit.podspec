@@ -94,6 +94,8 @@ Pod::Spec.new do |spec|
   spec.subspec 'popup' do |subspec|
     subspec.source_files          = 'ZKit/Classes/popup/*.{m,h}'
     subspec.dependency 'ZKit/core'
+		subspec.dependency 'Zopup'
+		subspec.frameworks            = 'UIKit'
   end
 
   spec.subspec 'optimize' do |subspec|
