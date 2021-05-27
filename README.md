@@ -1,6 +1,6 @@
 # ZKit
 
-[![Build Status](https://travis-ci.com/lzackx/ZKit.svg?branch=master)](https://travis-ci.com/lzackx/ZKit)
+[![Build Status](https://github.com/lzackx/ZKit/actions/workflows/ci.yml/badge.svg)](https://github.com/lzackx/ZKit/actions)
 [![Version](https://img.shields.io/cocoapods/v/ZKit.svg?style=flat)](https://cocoapods.org/pods/ZKit)
 [![License](https://img.shields.io/cocoapods/l/ZKit.svg?style=flat)](https://cocoapods.org/pods/ZKit)
 [![Platform](https://img.shields.io/cocoapods/p/ZKit.svg?style=flat)](https://cocoapods.org/pods/ZKit)
