@@ -21,7 +21,7 @@
 #import "ZNotification.h"
 #import "ZOptimize.h"
 #import "ZPayment.h"
-#import "ZPopup.h"
+#import "ZPopupManager.h"
 #import "ZRequestManager.h"
 #import "ZRouterManager.h"
 #import "NSString+ZKit.h"

@@ -173,8 +173,12 @@
       "dependencies": {
         "ZKit/core": [
 
+        ],
+        "Zopup": [
+          "~> 1.0.0"
         ]
-      }
+      },
+      "frameworks": "UIKit"
     },
     {
       "name": "optimize",
@@ -182,6 +186,12 @@
       "dependencies": {
         "ZKit/core": [
 
+        ],
+        "Zatcher/Core": [
+          "~> 1.0.0"
+        ],
+        "Zatcher/OrderGenerator": [
+          "~> 1.0.0"
         ]
       }
     },

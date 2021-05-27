@@ -1,0 +1,6 @@
+framework module Zopup {
+  umbrella header "Zopup-umbrella.h"
+
+  export *
+  module * { export * }
+}
